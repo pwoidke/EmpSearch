@@ -22,12 +22,37 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <h1>Employee Search Form</h1>
+        <p>Hello world! See <a href="http://www.chami.com/tips/internet/010597i.html">http://www.chami.com/tips/internet/010597i.html</a> for form info.</p>
 
-        <form data-validate="parsley"></form>
+        <a href="#openModal">Open Modal</a>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Modal Box</h2>
+                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                <form id="demo-form" data-validate="parsley">
+                    <label for="fullname">Full Name * :</label>
+                    <input type="text" id="fullname" name="fullname" data-required="true" />
+
+                    <label for="email">Email * :</label>
+                    <input type="text" id="email" name="email" data-trigger="change" data-required="true" data-type="email" />
+
+                    <label for="website">Website :</label>
+                    <input type="text" id="website" name="website" data-trigger="change" data-type="url" />
+
+                    <label for="message">Message (20 chars min, 200 max) :</label>
+                    <textarea id="message" name="message" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+
+        <script src="ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/parsley.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
