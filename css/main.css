@@ -100,6 +100,289 @@ textarea {
 
 
 
+body {
+    background:#000;
+    background-image:url(../images/rug_bg_02.jpeg);
+    font-size:100%;
+    color:#fff;
+}
+
+.container{
+    display:block;
+    width: 1024px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#333;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(51, 51, 51);
+    /* RGBa with 0.6 opacity */
+    background: rgba(51, 51, 51, 0.8);
+}
+
+/* Header */
+header{
+    display:block;
+    height: 400px;
+    width:1024px;
+    text-align:center;
+}
+
+.headerImg{
+    width:1024px;
+    height:200px;
+}
+
+.slideshow{
+    height:200px;
+    width:1024px;
+    background-image:url(../images/slideshowBackground.jpg);
+    background-repeat: no-repeat;
+}
+
+/* Layout */
+section{
+    display: block;
+}
+
+.leftCol{
+    text-align:center;
+    width:512px;
+    float:left;
+    padding:0px 30px 30px 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:30px;
+}
+
+.rightCol{
+    width:512px;
+    float:right;
+    padding:0px 30px 30px 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:10px;
+}
+
+.centerCol{
+    clear:both;
+    width:1024px;
+}
+
+footer{
+    display:block;
+    width:1024px;
+    clear:both;
+    background-color:#0c341e;
+    min-height:30px;
+    position:relative;
+    top:20px;
+    text-align:center;
+    padding:5px 0px 5px 0px;
+}
+
+/* Text */
+h1, h2, h3{
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #fff350;
+}
+
+h4{
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #FFF;
+}
+
+.title{
+    background-color:#0c341e;
+    width:100%;
+    font: normal 24px "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    color: #FFF;
+    text-align:left;
+    padding-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p{
+    font: normal 1.1em/1.7em "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    color: #DEDEDE;
+}
+
+a{
+    color: #B4B5AB;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    text-decoration:none;
+}
+
+a img {
+    border: none;
+}
+
+a:hover{
+    color: #fff350;
+    text-decoration:underline;
+}
+
+/* Tables */
+tr, td{
+    font: normal 12px"trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    color: #DEDEDE;
+}
+
+th{
+    background-color:#0c341e;
+    width:100%;
+    font: normal 14px "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    color: #FFF;
+    text-align:left;
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Left column */
+/* Container for Search */
+.search{
+    color:#fff350;
+    font-size:31px;
+    margin-bottom:0px;
+}
+
+.searchLabels{
+    text-align:right;
+    float:left;
+    font-size:18px;
+}
+
+.searchButton{
+    background-color: #FFF350;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    float: right;
+    margin-right:50px;
+    margin-top:25px;
+}
+
+.advSearch{
+    position:relative;
+    top:-10px;
+}
+
+.fb{
+    border:none;
+    overflow:hidden;
+    width:400px;
+    height:60px;
+}
+
+.RSDCountdown{
+    text-align:center;
+}
+
+/* Right column */
+.CIMS{
+    text-align:center;
+}
+
+.CIMSTitle{
+    line-height:30px;
+}
+
+/* Container for contact info */
+.contact{
+    margin-top:-10px;
+}
+
+.callUs{
+    font-size:36px;
+}
+
+.phoneNum{
+    float:right;
+    color:#DEDEDE;
+    font-size:32px;
+}
+
+.open7Days{
+    clear:both;
+    font-size:36px;
+    float:left;
+    margin-top:-10px;
+}
+
+.hours{
+    font-size:25px;
+    line-height:25px;
+    text-align:right;
+}
+
+.findUs{
+    clear:both;
+    font-size:36px;
+    float:left;
+    margin-top:-10px;
+}
+
+.location{
+    font-size:23px;
+    line-height:25px;
+    text-align:left;
+    float:right;
+    margin-top:-5px;
+}
+
+/* Container for embedded Google Map */
+.googleMap{
+    clear:both;
+    text-align:center;
+}
+
+.googleMapiFrame{
+    width:452px;
+    height:350px;
+}
+
+/* Center column */
+.findersTxt{
+    padding:30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Image gallery */
+/* All gallery images should be 720px tall (960x720 or 540x720) */
+.imageCrop{
+    width:250px;
+    height:250px;
+    overflow: hidden;
+    display:inline-block;
+    margin:5px;
+}
+
+.imageCrop .galleryThumb{
+    width:500px;
+    height:auto;
+    margin-left:-50px;
+    margin-top:-50px;
+}
+
+/* These classes are not displayed, but contents should be present in code */
+.fullSiteLink{
+    display:none;
+}
+
+.ccLicense{
+    display:none;
+}
 
 
 
