@@ -25,27 +25,42 @@
         <h1>Employee Search Form</h1>
         <p>Hello world! See <a href="http://www.chami.com/tips/internet/010597i.html">http://www.chami.com/tips/internet/010597i.html</a> for form info.</p>
 
-        <a href="#openModal">Open Modal</a>
+        <div class="modalOpen">Open Modal</div>
 
-        <div id="openModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
+        <div class="modalDialog">
+            <div class="modalContent">
+                <div class="modalClose">X</div>
                 <h2>Modal Box</h2>
                 <p>This is a sample modal box that can be created using the powers of CSS3.</p>
                 <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-                <form id="demo-form" data-validate="parsley">
-                    <label for="fullname">Full Name * :</label>
-                    <input type="text" id="fullname" name="fullname" data-required="true" />
-
-                    <label for="email">Email * :</label>
-                    <input type="text" id="email" name="email" data-trigger="change" data-required="true" data-type="email" />
-
-                    <label for="website">Website :</label>
-                    <input type="text" id="website" name="website" data-trigger="change" data-type="url" />
-
-                    <label for="message">Message (20 chars min, 200 max) :</label>
-                    <textarea id="message" name="message" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
-                    <input type="submit">
+                <form
+                      id="contact-form"
+                      data-validate="parsley"
+                      action="php/send.php"
+                      method="POST"
+                      enctype="multipart/form-data"
+                      name="EmailTestForm">
+                    <label for="name">Name:</label>
+                    <br/>
+                    <input type="text" id="name" name="name" data-required="true" />
+                    <br/>
+                    <label for="email">Email:</label>
+                    <br/>
+                    <input type="text" id="email" name="email" data-required="true" data-type="email" />
+                    <br/>
+                    <label for="message">Message:</label>
+                    <br/>
+                    <textarea id="message" name="message"></textarea>
+                    <br/>
+                    <input type="submit" value="Send">
+                    <!--
+                    What we'll need here:
+                        Name
+                        Year(s) worked
+                        Favorite Finders memory
+                        Photo (new/old?)
+                        Additional message
+                    -->
                 </form>
             </div>
         </div>
