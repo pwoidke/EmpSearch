@@ -1,11 +1,11 @@
 $('.modalOpen').click(function(){
-    $(".modalDialog")
+    $('.modalDialog')
         .css({display:'block'})
         .animate({opacity:"1.0"}, 300);
 });
 
 $('.modalDialog, .modalClose').click(function(){
-    $(".modalDialog")
+    $('.modalDialog')
         .animate({opacity:"0.0"}, 300, function(){
             $('.modalDialog').css({display:'none'});
         })
