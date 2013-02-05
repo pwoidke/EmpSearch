@@ -14,7 +14,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="../css/findersrecords-min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/findersrecords.css" />
         <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="../css/finders-ie-min.css" />
         <![endif]-->
@@ -246,7 +246,6 @@ $myPassword = "[password]";
 $myDatabaseName = "[database]" ;
 @mysql_select_db($myDatabaseName)
         or die ("Can't use the database $myDatabaseName !");
-
 
 //Write base SQL statement (based on loose/exact match selection)
 if(($usersQueryArtist != "") || ($usersQueryTitle != ""))
