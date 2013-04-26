@@ -173,19 +173,19 @@ footer{
 
 /* Text */
 h1, h2, h3{
-    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-family: 'Noto Serif', serif, Verdana, sans-serif;
     color: #fff350;
 }
 
 h4{
-    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-family: 'Noto Serif', serif, Verdana, sans-serif;
     color: #FFF;
 }
 
 .title{
     background-color:#0c341e;
     width:100%;
-    font: normal 24px "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    font: normal 24px 'Noto Serif', serif, futura, helvetica, "times new roman", times, serif;
     color: #FFF;
     text-align:left;
     padding-left:30px;
@@ -197,13 +197,14 @@ h4{
 }
 
 p{
-    font: normal 1.1em/1.7em "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    /*font-family: 'Noto Serif', serif;*/
+    font: normal 1.1em/1.7em 'Noto Serif', serif, futura, helvetica, "times new roman", times, serif;
     color: #DEDEDE;
 }
 
 a{
     color: #B4B5AB;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    font-family: "Noto Serif", Verdana, Helvetica, Arial, sans-serif;
     text-decoration:none;
 }
 
