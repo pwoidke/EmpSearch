@@ -101,34 +101,40 @@
             <section class="leftCol">
 
                 <!-- Begin Quick search form -->
-                <h2 class="search">Quick Search</h2>
-                <form action="search/search.php" method="post">
-                    <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
-                    <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
-                    <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
-                    <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
-                    <p class="searchLabels">Artist: <input name="usersSearchQueryArtist" type="text" size="35" /><br />
-                        Title: <input name="usersSearchQueryTitle" type="text" size="35" /></p>
-                    <input class="searchButton" type="submit" value="Search" />
-                </form>
-                <br style="clear:both;"/><br />
-                <a href="search/index.html" class="advSearch">Advanced Search</a>
+                <div class="quickSearch">
+                    <h2 class="search">Quick Search</h2>
+                    <form action="search/search.php" method="post">
+                        <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
+                        <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
+                        <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
+                        <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
+                        <p class="searchLabels">Artist: <input name="usersSearchQueryArtist" type="text" size="35" /><br />
+                            Title: <input name="usersSearchQueryTitle" type="text" size="35" /></p>
+                        <input class="searchButton" type="submit" value="Search" />
+                    </form>
+                    <br style="clear:both;"/><br />
+                    <a href="search/index.html" class="advSearch">Advanced Search</a>
+                </div>
                 <!-- End Quick search form -->
 
                 <br />
 
                 <!-- Begin Facebook integration -->
-                <iframe src="http://www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Ffindersrecords&action=Like&size=medium&max_rows=1&width=400&colorscheme=dark&appId=98099171222" scrolling="no" frameborder="0" class="fb" allowTransparency="true"></iframe>
-                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-                <fb:like href="https://www.facebook.com/findersrecords" layout="button_count" show_faces="false" width="165" font="verdana" colorscheme="dark"></fb:like>
+                <div class="facebook">
+                    <iframe src="http://www.facebook.com/plugins/facepile.php?href=https%3A%2F%2Fwww.facebook.com%2Ffindersrecords&action=Like&size=medium&max_rows=1&width=400&colorscheme=dark&appId=98099171222" scrolling="no" frameborder="0" class="fb" allowTransparency="true"></iframe>
+                    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                    <fb:like href="https://www.facebook.com/findersrecords" layout="button_count" show_faces="false" width="165" font="verdana" colorscheme="dark"></fb:like>
+                </div>
                 <!-- End Facebook integration -->
 
                 <br /><br />
 
-                <!-- Begin Twitter integration -->
-                <a href="https://twitter.com/FindersRecords" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @FindersRecords</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                <!-- End Twitter integration -->
+                <div class="twitter">
+                    <!-- Begin Twitter integration -->
+                    <a href="https://twitter.com/FindersRecords" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @FindersRecords</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <!-- End Twitter integration -->
+                </div>
 
                 <br /><br/><br/>
 
@@ -149,13 +155,15 @@
                 <br />
 
                 <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup">
-                    <form action= "http://findersrecords.us2.list-manage.com/subscribe/post?u=6b9c13df05321c2a2fa5591b6&amp;id=53205c78c0" method="post" id="mc-embedded-subscribe-form" name= "mc-embedded-subscribe-form" class="validate" target= "_blank">
-                        <label for="mce-EMAIL"><h2>Subscribe to our E-Newsletter</h2></label> <input type="email" value="" name= "EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
-                        <div class="clear">
-                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-                        </div>
-                    </form>
+                    <div class="mailchimp">
+                    <div id="mc_embed_signup">
+                        <form action= "http://findersrecords.us2.list-manage.com/subscribe/post?u=6b9c13df05321c2a2fa5591b6&amp;id=53205c78c0" method="post" id="mc-embedded-subscribe-form" name= "mc-embedded-subscribe-form" class="validate" target= "_blank">
+                            <label for="mce-EMAIL"><h2>Subscribe to our E-Newsletter</h2></label> <input type="email" value="" name= "EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
+                            <div class="clear">
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <!--End MailChimp Signup Form-->
 
@@ -223,6 +231,49 @@
                     <div class="modalOpen"><p class="findersTxt">Finders Employee Search</p></div>
                 </article>
                 <!-- End Employee Search -->
+
+                <!-- Begin Feed -->
+                <article>
+                    <h2 class="title">News Feed</h2>
+                    <div class="FBRSS">
+                        <!-- start feedwind code -->
+                        <script type="text/javascript">
+                            <!--
+                            rssmikle_url="https://www.facebook.com/feeds/page.php?id=6288789314&format=rss20";
+                            rssmikle_frame_width="900";
+                            rssmikle_frame_height="500";
+                            rssmikle_target="_blank";
+                            rssmikle_font="";
+                            rssmikle_font_size="15";
+                            rssmikle_border="off";
+                            //TODO: Make new CSS for RSS feed
+                            rssmikle_css_url="";//http://www.findersrecords.com/css/findersrecords.css";
+                            rssmikle_title="off";
+                            rssmikle_title_bgcolor="none";
+                            rssmikle_title_color="#FFFFFF";
+                            rssmikle_title_bgimage="none";
+                            rssmikle_item_bgcolor="none";
+                            rssmikle_item_bgimage="none";
+                            rssmikle_item_title_length="100";
+                            rssmikle_item_title_color="#fff350";
+                            rssmikle_item_border_bottom="on";
+                            rssmikle_item_description="on";
+                            rssmikle_item_description_length="500";
+                            rssmikle_item_description_color="#DEDEDE";
+                            rssmikle_item_date="gl2";
+                            rssmikle_item_description_tag="on_scrollbar";
+                            rssmikle_item_podcast="off";
+                            //-->
+                        </script>
+                        <script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script>
+                        <div style="font-size:10px; text-align:right;">
+                            <a href="http://feed.mikle.com/en/" target="_blank" style="color:#CCCCCC;">FeedWind</a>
+                            <!--Please display the above link in your web page according to Terms of Service.-->
+                        </div>
+                        <!-- end feedwind code -->
+                    </div>
+                </article>
+                <!-- End Feed -->
             </section>
             <!-- End Center Column -->
             <!-- Begin Footer -->
