@@ -234,9 +234,9 @@ else if($usersQueryTitle != "")
 }
 
 //Connect to the database server
-$dbServer = "[server]";
-$myUserName = "[username]";
-$myPassword = "[password]";
+$dbServer = "internal-db.s16310.gridserver.com";
+$myUserName = "db16310_admin";
+$myPassword = "FindersRecords01";
 @mysql_connect($dbServer, $myUserName, $myPassword)
         or die ("Can't validate my user name/pwd on the local mysql server!");
 
@@ -374,12 +374,12 @@ if($resultFromQuery)
 
 	if (!$numberOfTuples) 
 	{
-//    die('Error - Query failed: ' . mysql_error());
-    die('<br/>No results found.<br/>');
+		//die('Error - Query failed: ' . mysql_error());	//Use for debugging only
+		print "<br/>No results found.<br/>";
 	}
 	
-	echo "<span style=\"color:#F00; font-size:20px; font-style:italic;\">Item availability is based on current stock at distributor. Please call Finders Records at (419) 352-7677 to check in-store availability.<br/><br/>MSLP is provided as a rough estimate of price and may not correspond to in-store price.</span><br/><br/>";
-	echo "<p>Found " . $numberOfTuples . " results:</p>";
+	print "<span style=\"color:#F00; font-size:20px; font-style:italic;\">Item availability is based on current stock at distributor. Please call Finders Records at (419) 352-7677 to check in-store availability.<br/><br/>MSLP is provided as a rough estimate of price and may not correspond to in-store price.</span><br/><br/>";
+	print "<p>Found " . $numberOfTuples . " results:</p>";
 
 	//print the tuples as a nice table
 	print "<table width=\"650px\">";
@@ -426,7 +426,7 @@ if($resultFromQuery)
 }
 else
 {
-	echo "\nNo results found.<br/>";
+	print "<br/>No results found.<br/>";
 }
 
 ?>

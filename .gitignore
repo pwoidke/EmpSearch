@@ -162,6 +162,14 @@ pip-log.txt
 # Mac crap
 .DS_Store
 
-# WebStorm
+#############
+## WebStorm
+#############
 .idea/
 .idea/*
+
+#############
+## SASS
+#############
+.sass-cache/
+.sass-cache/*

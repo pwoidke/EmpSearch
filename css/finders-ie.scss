@@ -1,13 +1,10 @@
-/* Finders Records CSS for Mobile Devices */
-/* Please see ~/css/findersrecords.css for full CSS */
-
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+//Mixins
+@mixin main-font {
+	font-family: 'Noto Serif', serif, Verdana, sans-serif;
+}
+@mixin table-font {
+	font: normal 12px"trebuchet ms", futura, helvetica, "times new roman", times, serif;
+}
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -98,44 +95,39 @@ textarea {
 
 
 body {
-	background:#000;
-	background-image:url(../images/rug_bg_02.jpeg);
+  background: #000 url(../images/rug_bg_02.jpeg);
 	font-size:100%;
 	color:#fff;
 }
 
 .container{
 	display:block;
-	width: 90%;
+	width: 1024px;
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#333;
 	/* Fallback for web browsers that doesn't support RGBa */
 	background: rgb(51, 51, 51);
-	/* RGBa with 0.6 opacity */
+	/* RGBa with 0.8 opacity */
 	background: rgba(51, 51, 51, 0.8);
+	text-align:center;
 }
 
 /* Header */
 header{
 	display:block;
-	width:100%;
-	height:auto;
+	height: 400px;
+	width:1024px;
 	text-align:center;
 }
 
-header img{
-	width:100%;
-	height:auto;
-}
-
-.headerImg{
-	width:100%;
-	height:auto;
+.headerImg, .slideshow{
+	width:1024px;
+	height:200px;
 }
 
 .slideshow{
-	display:none;
+	background: url(../images/slideshowBackground.jpg) no-repeat;
 }
 
 /* Layout */
@@ -143,50 +135,59 @@ section{
 	display: block;
 }
 
+.leftCol, .rightCol{
+    width:450px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .leftCol{
-	display:none;
+    margin-bottom:30px;
+	text-align:center;
+	float:left;
+	padding:20px 30px 0 30px;
 }
 
 .rightCol{
+    margin-bottom:10px;
+	float:right;
 	padding:30px;
-	-moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-	margin-bottom:30px;
 }
 
 .centerCol{
-	clear:both;
-	width:100%;
+    clear:both;
+    width:1024px;
+	text-align: left;
 }
+
 
 footer{
 	display:block;
-	width:100%;
+	width:1024px;
 	clear:both;
 	background-color:#0c341e;
 	min-height:30px;
 	position:relative;
-	top:20px;
+	top:10px;
 	text-align:center;
 	padding:5px 0 5px 0;
 }
 
 /* Text */
 h1, h2, h3{
-	font-family: "Trebuchet MS", Verdana, sans-serif;
+    @include main-font;
 	color: #fff350;
 }
 
 h4{
-	font-family: "Trebuchet MS", Verdana, sans-serif;
+    @include main-font;
 	color: #FFF;
 }
 
 .title{
 	background-color:#0c341e;
-	width:100%;
-	font: normal 24px "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    @include main-font;
 	color: #FFF;
 	text-align:left;
 	padding-left:30px;
@@ -198,35 +199,38 @@ h4{
 }
 
 p{
-	font: normal 1.1em/1.7em "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    @include main-font;
+	font-size: 1.1em/1.7em;
 	color: #DEDEDE;
 }
 
 a{
 	color: #B4B5AB;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    @include main-font;
 	text-decoration:none;
 }
 
-a img {
-	border: none;
-}
-
-a:hover{
-	color: #fff350;
-	text-decoration:underline;
+a
+{
+	img {
+	  border: none;
+	}
+  	&:hover{
+		color: #fff350;
+		text-decoration:underline;
+	}
 }
 
 /* Tables */
 tr, td{
-	font: normal 12px"trebuchet ms", futura, helvetica, "times new roman", times, serif;
+    @include table-font;
 	color: #DEDEDE;
 }
 
 th{
 	background-color:#0c341e;
 	width:100%;
-	font: normal 14px "trebuchet ms", futura, helvetica, "times new roman", times, serif;
+	@include table-font;
 	color: #FFF;
 	text-align:left;
 	padding-left:10px;
@@ -274,12 +278,11 @@ th{
 }
 
 .RSDCountdown{
-	display: none;
+	text-align:center;
 }
 
 /* Right column */
 .CIMS{
-	display:none;
 	text-align:center;
 }
 
@@ -289,21 +292,20 @@ th{
 
 /* Container for contact info */
 .contact{
-	margin-top:-20px;
+	margin-top:-10px;
 }
 
-.callUs{
+.callUs, .open7Days, .findUs{
 	font-size:36px;
 }
 
 .phoneNum{
-	float:right;
 	color:#DEDEDE;
+	font-size:32px;
 }
 
 .open7Days{
 	clear:both;
-	font-size:36px; 
 	float:left; 
 	margin-top:-10px;
 }
@@ -316,7 +318,6 @@ th{
 
 .findUs{
 	clear:both;
-	font-size:36px; 
 	float:left; 
 	margin-top:-10px;
 }
@@ -332,11 +333,11 @@ th{
 /* Container for embedded Google Map */
 .googleMap{
 	clear:both;
-	text-align:center;
+	text-align:left;
 }
 
 .googleMapiFrame{
-	width:100%;
+	width:350px;
 	height:350px;
 }
 
@@ -348,11 +349,27 @@ th{
 	box-sizing: border-box;
 }
 
-.fullSiteLink{
-	display:block;
+/* Image gallery */
+/* All gallery images should be 720px tall (960x720 or 540x720) */
+.imageCrop{
+	width:250px;
+	height:250px;
+    overflow: hidden;
+	display:inline-block;
+	margin:5px;
+	.galleryThumb{
+		width:500px;
+		height:auto;
+		margin-left:-50px;
+		margin-top:-50px;
+	}
 }
 
-/* This class is not displayed, but contents should be present in code */
+/* These classes are not displayed, but contents should be present in code */
+.fullSiteLink{
+	display:none;
+}
+
 .ccLicense{
 	display:none;
 }
@@ -374,15 +391,14 @@ th{
     z-index: 99999;
     opacity:0;
     display: none;
-}
-
-.modalDialog > div {
-    width: 500px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #333;
+  	div {
+		  width: 500px;
+		  position: relative;
+		  margin: 10% auto;
+		  padding: 5px 20px 13px 20px;
+		  border-radius: 10px;
+		  background: #333;
+	}
 }
 
 .modalClose {
@@ -402,9 +418,8 @@ th{
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
+	&:hover { background: #00d9ff; }
 }
-
-.modalClose:hover { background: #00d9ff; }
 
 .parsley-validated {
     background-color: blue;
@@ -445,6 +460,10 @@ th{
     background-color: black;
 }
 
+.FBRSS {
+    text-align: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -459,13 +478,12 @@ th{
     overflow: hidden;
     /* IE 6/7 fallback */
     *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+  	&:before {
+		  content: "";
+		  display: block;
+		  width: 0;
+		  height: 150%;
+	}
 }
 
 /*
