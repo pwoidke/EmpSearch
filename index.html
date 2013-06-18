@@ -11,11 +11,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/findersrecords.css" />
+        <link rel="stylesheet" type="text/css" href="css/finders-mobile.css" />
         <!-- End Page Title and CSS -->
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -33,7 +32,6 @@
 
         <!-- Begin Slideshow Code Refs -->
         <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="css/slideshow-min.css">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 767px)" href="css/m-slideshow-min.css">
         <script type="text/javascript" src="js/mootools-1.3.1-core.js"></script>
         <script type="text/javascript" src="js/mootools-1.3.1.1-more-min.js"></script>
         <script type="text/javascript" src="js/slideshow-min.js"></script>
@@ -61,8 +59,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
 
         <!-- Begin Page Container -->
         <div class="container">
@@ -98,17 +94,37 @@
 
                 <!-- Begin Quick search form -->
                 <div class="quickSearch">
-                    <h2 class="search">Quick Search</h2>
+                    <h2 class="searchHeader">Quick Search</h2>
                     <form action="search/search.php" method="post">
                         <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
                         <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
                         <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
                         <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
-                        <p class="searchLabels">Artist: <input name="usersSearchQueryArtist" type="text" size="35" /><br />
-                            Title: <input name="usersSearchQueryTitle" type="text" size="35" /></p>
-                        <input class="searchButton" type="submit" value="Search" />
+                        <table id="quickSearchTable">
+                            <tr>
+                                <td class="searchLabels">
+                                    <label for="artistInput">Artist:</label>
+                                </td>
+                                <td class="searchInputs">
+                                    <input name="usersSearchQueryArtist" id="artistInput" type="text" size="35" /><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="searchLabels">
+                                    <label for="titleInput">Title:</label>
+                                </td>
+                                <td class="searchInputs">
+                                    <input name="usersSearchQueryTitle" id="titleInput" type="text" size="35" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: right">
+                                    <input class="searchButton" type="submit" value="Search" />
+                                </td>
+                            </tr>
+                        </table>
                     </form>
-                    <br style="clear:both;"/><br />
+                    <br style="clear:both;"/>
                     <a href="search/index.html" class="advSearch">Advanced Search</a>
                 </div>
                 <!-- End Quick search form -->
@@ -136,17 +152,15 @@
 
                 <!-- Begin RSD countdown -->
                 <div class="RSDCountdown">
-                    <canvas id="RSDCountdown">
-						<object height="176" width="300">
-							<param name="allowScriptAccess" value="sameDomain" />
-							<param name="allowFullScreen" value="false" />
-							<param name="movie" value="http://recordstoreday.com/templates/Store/pretty_new/swf/countdown.swf" />
-							<param name="quality" value="high" />
-							<param name="bgcolor" value="#FFF" />
-							<param name="shuffle" value="true" />
-							<embed src="http://recordstoreday.com/templates/Store/pretty_new/swf/countdown.swf" width="300" height="176" bgcolor="#FFF" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" AllowScriptAccess="sameDomain"></embed>
-						</object>
-					</canvas>
+                    <object height="176" width="300" id="RSDCountdown">
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <param name="allowFullScreen" value="false" />
+                        <param name="movie" value="http://recordstoreday.com/templates/Store/pretty_new/swf/countdown.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#FFF" />
+                        <param name="shuffle" value="true" />
+                        <embed src="http://recordstoreday.com/templates/Store/pretty_new/swf/countdown.swf" width="300" height="176" bgcolor="#FFF" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" AllowScriptAccess="sameDomain"></embed>
+                    </object>
                 </div>
                 <!-- End RSD countdown -->
 
@@ -156,7 +170,8 @@
                     <div class="mailchimp">
                     <div id="mc_embed_signup">
                         <form action= "http://findersrecords.us2.list-manage.com/subscribe/post?u=6b9c13df05321c2a2fa5591b6&amp;id=53205c78c0" method="post" id="mc-embedded-subscribe-form" name= "mc-embedded-subscribe-form" class="validate" target= "_blank">
-                            <label for="mce-EMAIL"><h2>Subscribe to our E-Newsletter</h2></label> <input type="email" value="" name= "EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
+                            <h2><label for="mce-EMAIL">Subscribe to our E-Newsletter</label></h2>
+                            <input type="email" value="" name= "EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
                             <div class="clear">
                                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
                             </div>
@@ -167,9 +182,6 @@
 
             </section>
             <!-- End Left Column -->
-
-
-
 
             <!-- Begin Right Column -->
             <section class="rightCol">
@@ -203,27 +215,27 @@
             </section>
             <!-- End Right Column -->
 
-
-
-
-
             <!-- Begin Center Column -->
             <section class="centerCol">
+
                 <!-- Begin About -->
-                <article>
+                <article id="about">
                     <h2 class="title">About Finders Records</h2>
                     <p class="findersTxt">Finders Records has been an independent resource of music and vinyl records since 1971.<br/><br/>
                         We are located at 128 N. Main St. in the heart of downtown Bowling Green, Ohio and are open Monday-Saturday 9am to 9pm, and Sundays 11am to 5pm.<br/><br/>
                         If you have any questions, or would like to inquire about product availability, feel free to call us at (419) 352-7677.<br/><br/>
                         Please take some time and explore our extensive selection of vinyl records, CD's, DVDs, Import and Domestic releases. We thank you for supporting Independent Music retailing and look forward to serving you!</p>
-                    <h2 style="margin-left:30px;margin-bottom:30px;"><a href="store/index.html" target="_self">Store Photos &amp; History</a></h2>
-                    <h1 align="center">Find It At Finders</h1>
-                    <h2 align="center"><i>"Your Independent Music Library  Since 1971"</i></h2>
+                    <!--<p><a class="modalLink" href="#modal1">Click Me</a></p>-->
+                    <h2><a href="store/index.html" target="_self">Store Photos &amp; History</a></h2>
+                    <div id="findItAtFinders">
+                        <h1>Find It At Finders</h1>
+                        <h2><i>"Your Independent Music Library  Since 1971"</i></h2>
+                    </div>
                 </article>
                 <!-- End About -->
 
                 <!-- Begin Feed -->
-                <article>
+                <article id="feed">
                     <h2 class="title">News Feed</h2>
                     <div class="FBRSS">
                         <!-- start feedwind code -->
@@ -257,14 +269,15 @@
                         <script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script>
                         <div style="font-size:10px; text-align:right;">
                             <a href="http://feed.mikle.com/en/" target="_blank" style="color:#CCCCCC;">FeedWind</a>
-                            <!--Please display the above link in your web page according to Terms of Service.-->
                         </div>
                         <!-- end feedwind code -->
                     </div>
                 </article>
                 <!-- End Feed -->
+
             </section>
             <!-- End Center Column -->
+
             <!-- Begin Footer -->
             <footer>
                 <!-- Begin Full Site Link (Mobile Only) -->
@@ -283,11 +296,16 @@
         </div>
         <!-- End Page Container -->
 
-        <script src="ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <!--<div id="modal1" class="modal">-->
+            <!--<p class="closeBtn">Close</p>-->
+            <!--<h2>Your Content Here</h2>-->
+        <!--</div>-->
+
+        <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script type='text/javascript' src='js/jquery.modal.min.js'></script>
         <script src="js/main.js"></script>
-		<script src="js/RSDCountdown.js"></script>
 
         <!-- Google Analytics -->
         <script>

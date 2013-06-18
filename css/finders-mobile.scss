@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+
+@media screen and (max-width: 767px)
+{
+  .container{
+    width: 90%;
+  }
+
+  header, header img, .headerImg{
+    height:auto;
+  }
+
+  header, header img, .headerImg, .centerCol, footer, .googleMapiFrame{
+    width:100%;
+  }
+
+  .slideshow, .leftCol, .RSDCountdown, .CIMS, #feed{
+    display:none;
+  }
+
+  .rightCol{
+    width:100%;
+    padding:30px;
+    margin-bottom:30px;
+  }
+
+  .contact{
+    margin-top:-20px;
+  }
+
+  .fullSiteLink{
+    display:block;
+  }
+}

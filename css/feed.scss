@@ -21,7 +21,6 @@
 
 .feed_item_description{
   @include table-font;
-  font-size: 1.1em/1.7em;
   color: $bodyText;
   a{
     color: $linkText;
@@ -39,7 +38,6 @@
 
 .feed_item_date{
   @include table-font;
-  font-size: 13px;
   color: $titleText;
   margin-top: 15px;
 }
