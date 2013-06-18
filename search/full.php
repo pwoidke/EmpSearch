@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../css/findersrecords.css" />
-        <link rel="stylesheet" type="text/css" href="../css/finders-mobile.css" />
         <!-- End Page Title and CSS -->
 
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>

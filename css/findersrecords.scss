@@ -90,46 +90,46 @@ textarea{
 
 
 body{
-    background: #000 url(../images/rug_bg_02.jpeg);
-    font-size:100%;
-    color: $bodyText;
+  background: #000 url(../images/rug_bg_02.jpeg);
+  font-size:100%;
+  color: $bodyText;
 }
 
 .container{
-    display:block;
-    width: $contentWidth;
-    margin-left:auto;
-    margin-right:auto;
-    background-color:#333;
-	/* Fallback for web browsers that doesn't support RGBa */
-	background: rgb(51, 51, 51);
-	/* RGBa with 0.8 opacity */
-	background: rgba(51, 51, 51, 0.8);
+  display:block;
+  width: $contentWidth;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#333;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(51, 51, 51);
+  /* RGBa with 0.8 opacity */
+  background: rgba(51, 51, 51, 0.8);
 }
 
 /* Header */
 header{
-    display:block;
-    width: $contentWidth;
-    text-align:center;
+  display:block;
+  width: $contentWidth;
+  text-align:center;
 }
 
 .headerImg, .slideshow{
-    width: $contentWidth;
-    height:200px;
+  width: $contentWidth;
+  height:200px;
 }
 
 .slideshow{
-    background: url(../images/slideshowBackground.jpg) no-repeat;
+  background: url(../images/slideshowBackground.jpg) no-repeat;
 }
 
 /* Layout */
 section{
-    display: block;
+  display: block;
 }
 
 article > *{
-   padding-left: 30px;
+  padding-left: 30px;
 }
 
 article > .FBRSS{
@@ -137,9 +137,9 @@ article > .FBRSS{
 }
 
 .leftCol, .rightCol{
-    width:($contentWidth/2);
-    padding:0 30px 30px 30px;
-    @include border-box;
+  width:($contentWidth/2);
+  padding:0 30px 30px 30px;
+  @include border-box;
 }
 
 #contentPage .container{
@@ -152,100 +152,100 @@ article > .FBRSS{
 }
 
 .leftCol{
-    margin-bottom:30px;
-	text-align:center;
-	float:left;
+  margin-bottom:30px;
+  text-align:center;
+  float:left;
 }
 
 .rightCol{
-    margin-bottom:10px;
-	float:right;
+  margin-bottom:10px;
+  float:right;
 }
 
 .centerCol{
-    clear:both;
-    width: $contentWidth;
+  clear:both;
+  width: $contentWidth;
 }
 
 footer{
-    display:block;
-    width: $contentWidth;
-    clear:both;
-    background-color:#0c341e;
-    min-height:30px;
-    position:relative;
-    top:20px;
-    text-align:center;
-    padding:5px 0;
+  display:block;
+  width: $contentWidth;
+  clear:both;
+  background-color:#0c341e;
+  min-height:30px;
+  position:relative;
+  top:20px;
+  text-align:center;
+  padding:5px 0;
 }
 
 /* Text */
 h1, h2, h3{
-    @include main-font;
-    color: $titleText;
+  @include main-font;
+  color: $titleText;
 }
 
 h4{
-    @include main-font;
-    color: $bodyText;
+  @include main-font;
+  color: $bodyText;
 }
 
 .title{
-    background-color:#0c341e;
-    width:100%;
-    @include main-font;
-    color: $bodyText;
-    text-align:left;
-    padding: 10px 0 10px 30px;
-    @include border-box;
+  background-color:#0c341e;
+  width:100%;
+  @include main-font;
+  color: $bodyText;
+  text-align:left;
+  padding: 10px 0 10px 30px;
+  @include border-box;
 }
 
 p{
-    @include main-font;
-	font-size: 1.1em/1.7em;
-    color: $bodyText;
+  @include main-font;
+  font-size: 1.1em/1.7em;
+  color: $bodyText;
 }
 
 a{
-    color: $linkText;
-    @include main-font;
-    text-decoration:none;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    border-bottom: 1px dotted $bodyText;
-    img{
-        border: none;
-        text-decoration: none;
-    }
-    &:hover{
-        color: $titleText;
-        border-bottom: 1px dotted $titleText;
-    }
+  color: $linkText;
+  @include main-font;
+  text-decoration:none;
+  transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  border-bottom: 1px dotted $bodyText;
+  img{
+    border: none;
+    text-decoration: none;
+  }
+  &:hover{
+    color: $titleText;
+    border-bottom: 1px dotted $titleText;
+  }
 }
 
 /* Tables */
 tr, td{
-    @include table-font;
-    color: $bodyText;
+  @include table-font;
+  color: $bodyText;
 }
 
 th{
-    background-color:#0c341e;
-    width:100%;
-	@include table-font;
-    color: $bodyText;
-    text-align:left;
-    padding: 5px 0 5px 10px;
-    @include border-box;
+  background-color:#0c341e;
+  width:100%;
+  @include table-font;
+  color: $bodyText;
+  text-align:left;
+  padding: 5px 0 5px 10px;
+  @include border-box;
 }
 
 /* Left column */
 /* Container for Search */
 .searchHeader{
-    color:$titleText;
-    font-size:31px;
-    margin-bottom:0;
+  color:$titleText;
+  font-size:31px;
+  margin-bottom:0;
 }
 
 #quickSearchTable{
@@ -253,105 +253,105 @@ th{
 }
 
 .searchLabels, .searchInputs{
-    text-align:right;
-    font-size:18px;
-    @include main-font;
-    color: $bodyText;
-    padding-right: 10px;
+  text-align:right;
+  font-size:18px;
+  @include main-font;
+  color: $bodyText;
+  padding-right: 10px;
 }
 
 .searchButton{
-    background-color: $titleText;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    margin: 15px 10px 0 0;
+  background-color: $titleText;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 15px 10px 0 0;
 }
 
 .advSearch{
-    position:relative;
-    top:-10px;
+  position:relative;
+  top:-10px;
 }
 
 .advSearch td, .quickSearch td{
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .fb{
-    border:none;
-    overflow:hidden;
-    width:400px;
-    height:60px;
+  border:none;
+  overflow:hidden;
+  width:400px;
+  height:60px;
 }
 
 .RSDCountdown{
-    text-align:center;
+  text-align:center;
 }
 
 /* Right column */
 .CIMS{
-    text-align:center;
+  text-align:center;
 }
 
 .CIMSTitle{
-    line-height:30px;
+  line-height:30px;
 }
 
 /* Container for contact info */
 .contact{
-    margin-top:-10px;
+  margin-top:-10px;
 }
 
 .callUs, .open7Days, .findUs{
-    font-size:36px;
+  font-size:36px;
 }
 
 .phoneNum{
-    float:right;
-    color:$bodyText;
-    font-size:32px;
+  float:right;
+  color:$bodyText;
+  font-size:32px;
 }
 
 .open7Days{
-    clear:both;
-    float:left;
-    margin-top:-10px;
+  clear:both;
+  float:left;
+  margin-top:-10px;
 }
 
 .hours{
-    font-size:25px;
-    line-height:25px;
-    text-align:right;
+  font-size:25px;
+  line-height:25px;
+  text-align:right;
 }
 
 .findUs{
-    clear:both;
-    float:left;
-    margin-top:-10px;
+  clear:both;
+  float:left;
+  margin-top:-10px;
 }
 
 .location{
-    font-size:23px;
-    line-height:25px;
-    text-align:left;
-    float:right;
-    margin-top:-5px;
+  font-size:23px;
+  line-height:25px;
+  text-align:left;
+  float:right;
+  margin-top:-5px;
 }
 
 /* Container for embedded Google Map */
 .googleMap{
-    clear:both;
-    text-align:center;
+  clear:both;
+  text-align:center;
 }
 
 .googleMapiFrame{
-    width:452px;
-    height:350px;
+  width:452px;
+  height:350px;
 }
 
 /* Center column */
 .findersTxt{
-    @include border-box;
+  @include border-box;
 }
 
 #findItAtFinders{
@@ -366,35 +366,34 @@ th{
 }
 
 .imageCrop{
-    width:250px;
-    height:250px;
-    overflow: hidden;
-    display:inline-block;
-    margin:5px;
-	.galleryThumb{
-		width:500px;
-		height:auto;
-		margin: -50px 0 0 -50px;
-	}
+  width:250px;
+  height:250px;
+  overflow: hidden;
+  display:inline-block;
+  margin:5px;
+  .galleryThumb{
+    width:500px;
+    height:auto;
+    margin: -50px 0 0 -50px;
+  }
+}
+
+/* Advanced search page */
+#search_results_table{
+  margin-left:30px;
 }
 
 /* These classes are not displayed, but contents should be present in code */
 .fullSiteLink{
-    display:none;
+  display:none;
 }
 
 .ccLicense{
-    display:none;
-}
-
-.photoPreview{
-    width: 150px;
-    height: 150px;
-    background-color: black;
+  display:none;
 }
 
 .FBRSS{
-    text-align: center;
+  text-align: center;
 }
 
 

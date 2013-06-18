@@ -7,13 +7,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Page Title and CSS -->
-        <title>Finders Records - Your Independent Vinyl Record Store Since 1971 - Home</title>
+        <title>Finders Records - Your Independent Vinyl Record Store Since 1971 - Search</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../css/findersrecords.css" />
+        <link rel="stylesheet" type="text/css" href="../css/finders-mobile.css" />
         <!-- End Page Title and CSS -->
 
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
@@ -46,7 +47,7 @@
         <!-- End Mailchimp styling -->
 
     </head>
-    <body id="contentPage">
+    <body id="contentPage" class="search">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -163,7 +164,7 @@
 
                 <div class="advSearch" align="left">
                     <h1 align="center">Advanced Search</h1>
-                    <table align="center">
+                    <table align="center" id="advancedSearchTable">
                         <form action="search.php" method="post">
                             <tr>
                                 <td colspan="2">
