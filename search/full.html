@@ -14,6 +14,14 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../css/findersrecords.css" />
+        <style>
+            @media screen and (max-width: 767px)
+            {
+                .mobileSiteLink{
+                    display: block;
+                }
+            }
+        </style>
         <!-- End Page Title and CSS -->
 
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
@@ -58,7 +66,7 @@
             <header>
 
                 <!-- Begin header image -->
-                <div class="headerImg"><a href="http://www.findersrecords.com"><img src="../images/head_bg.jpg" width="1024" height="200" /></a></div>
+                <div class="headerImg"><a href="http://www.findersrecords.com/full.html"><img src="../images/head_bg.jpg" width="1024" height="200" /></a></div>
                 <!-- End header image -->
 
             </header>
@@ -70,7 +78,7 @@
                 <!-- Begin Quick search form -->
                 <div class="quickSearch">
                     <h2 class="searchHeader">Quick Search</h2>
-                    <form action="../search/search.php" method="post">
+                    <form action="../search/full.php" method="post">
                         <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
                         <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
                         <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
@@ -100,7 +108,7 @@
                         </table>
                     </form>
                     <br style="clear:both;"/>
-                    <a href="../search/index.html" class="advSearch">Advanced Search</a>
+                    <a href="../search/full.html" class="advSearch">Advanced Search</a>
                 </div>
                 <!-- End Quick search form -->
 
@@ -164,7 +172,7 @@
                 <div class="advSearch" align="left">
                     <h1 align="center">Advanced Search</h1>
                     <table align="center" id="advancedSearchTable">
-                        <form action="search.php" method="post">
+                        <form action="full.php" method="post">
                             <tr>
                                 <td colspan="2">
                                     <b style="font-size:large; margin-right:20px;">Search type:</b>
@@ -250,6 +258,9 @@
                 <!-- Begin Full Site Link (Mobile Only) -->
                 <div class="fullSiteLink">
                     <p><a href="full.html" target="_self">Full Site</a></p>
+                </div>
+                <div class="mobileSiteLink">
+                    <p><a href="index.html" target="_self">Mobile Site</a></p>
                 </div>
                 <!-- End Full Site Link (Mobile Only) -->
 
