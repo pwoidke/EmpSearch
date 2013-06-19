@@ -242,6 +242,14 @@ th{
 
 /* Left column */
 /* Container for Search */
+.quickSearch, .facebook{
+  margin-bottom: 40px;
+}
+
+.twitter, .RSDCountdown{
+  margin-bottom: 60px;
+}
+
 .searchHeader{
   color:$titleText;
   font-size:31px;

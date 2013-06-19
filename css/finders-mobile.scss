@@ -6,7 +6,7 @@
 {
   .container{
     width: 90%;
-    min-width: 200px;
+    min-width: 420px;
   }
 
   header, header img, .headerImg{
@@ -17,28 +17,61 @@
     width:100%;
   }
 
-  .slideshow, .leftCol, .RSDCountdown, .CIMS, #feed, .mobileSiteLink{
+  .slideshow, .CIMS, #feed, .mobileSiteLink{
     display:none;
   }
 
-  .rightCol{
+  .leftCol{
+    margin-bottom: 0;
+    .facebook, .twitter, .RSDCountdown, .mailchimp{
+      display:none;
+    }
+    .quickSearch{
+      margin-bottom: 0;
+    }
+  }
+
+  #quickSearchTable{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .rightCol, .leftCol{
+      width: 100%;
+    }
+
+  .leftCol .quickSearch{
+    display: block;
     width: 100%;
   }
 
   #contentPage{
-    .container .rightCol{
-      width:100%;
-      padding:30px;
-      margin-bottom:30px;
-    }
     &.store .container{         //Store Photos & History
       min-width: 320px;
     }
     &.search .container{        //Advanced Search
       min-width: 400px;
+      .leftCol{
+        display: none;
+      }
     }
     &.searchResults .container{ //Advanced Search Results
       min-width: 450px;
+      .leftCol{
+        display: none;
+      }
+    }
+    .container{
+      .leftCol{
+        padding:0 30px 0 30px;
+        margin: 0;
+        width: 100%;
+      }
+      .rightCol{
+        width:100%;
+        padding:30px;
+        margin-bottom:30px;
+      }
     }
   }
 
