@@ -37,14 +37,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
     <!-- End SEO -->
 
-    <!-- Begin Slideshow Code Refs -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="css/slideshow-min.css">
-    <script type="text/javascript" src="js/mootools-1.3.1-core.js"></script>
-    <script type="text/javascript" src="js/mootools-1.3.1.1-more-min.js"></script>
-    <script type="text/javascript" src="js/slideshow-min.js"></script>
-    <script type="text/javascript" src="js/slideshow.fold-min.js"></script>
-    <!-- End Slideshow Code Refs -->
-
     <!-- Begin Mailchimp styling -->
     <script href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></script>
     <style type="text/css">
@@ -78,18 +70,6 @@
     <!-- End header image -->
 
     <!-- Start Image Slideshow -->
-    <script>
-        /* Check if the browser supports HTML5 Canvas to ensure proper slideshow functionality */
-        if(!!document.createElement('canvas').getContext)
-        {
-            window.addEvent('domready', function(){
-                //This is all CASE-SENSITIVE including file extensions!
-                var data = { '1.jpg': { caption: '' }, '2.jpg': { caption: '' }, '3.jpg': { caption: '' }, '4.jpg': { caption: '' }, '5.jpg': { caption: '' }, '6.jpg': { caption: '' }, '7.jpg': { caption: '' }};
-                new Slideshow.Fold('fold', data, { height: 200, hu: 'storephotos/', width: 1024 });
-            });
-        }
-    </script>
-
     <div id="fold" class="slideshow"></div>
     <!-- End Image Slideshow -->
 
