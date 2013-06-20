@@ -307,49 +307,46 @@ th{
 
 /* Container for contact info */
 .contact{
-  margin-top:-10px;
-}
-
-.callUs, .open7Days, .findUs{
-  font-size:36px;
-}
-
-.phoneNum{
-  float:right;
-  color:$bodyText;
-  font-size:32px;
-}
-
-.open7Days{
-  clear:both;
-  float:left;
-  margin-top:-10px;
-}
-
-.hours{
-  font-size:25px;
-  line-height:25px;
-  text-align:right;
-}
-
-.findUs{
-  clear:both;
-  float:left;
-  margin-top:-10px;
-}
-
-.location{
-  font-size:23px;
-  line-height:25px;
-  text-align:left;
-  float:right;
-  margin-top:-5px;
+  margin-top:30px;
+  .contactLine{
+    clear: both;
+    .contactLabel{
+      display: inline-block;
+      h2{
+        margin:0;
+      }
+      .contactLabelText{
+        font-size:36px;
+      }
+    }
+    .contactItem{
+      display: inline-block;
+      float:right;
+      line-height:20px;
+      #phoneNum, #hours, #address{
+        margin:0;
+        margin-top: 15px;
+        color:$bodyText;
+      }
+      #hours, #address{
+        font-size:23px;
+        line-height:25px;
+      }
+      #phoneNum{
+        font-size:32px;
+      }
+      #hours{
+        text-align:right;
+      }
+    }
+  }
 }
 
 /* Container for embedded Google Map */
 .googleMap{
   clear:both;
   text-align:center;
+  margin-top: 30px;
 }
 
 .googleMapiFrame{

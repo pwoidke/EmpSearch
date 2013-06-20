@@ -6,7 +6,7 @@
 {
   .container{
     width: 90%;
-    min-width: 420px;
+    min-width: 480px;
   }
 
   header, header img, .headerImg{
@@ -36,9 +36,9 @@
     margin-right: auto;
   }
 
-    .rightCol, .leftCol{
-      width: 100%;
-    }
+  .rightCol, .leftCol{
+    width: 100%;
+  }
 
   .leftCol .quickSearch{
     display: block;
@@ -47,10 +47,10 @@
 
   #contentPage{
     &.store .container{         //Store Photos & History
-      min-width: 320px;
+      min-width: 360px;
     }
     &.search .container{        //Advanced Search
-      min-width: 400px;
+      min-width: 450px;
       .leftCol{
         display: none;
       }
@@ -76,7 +76,7 @@
   }
 
   .contact{
-    margin-top:-20px;
+    margin-top:-10px;
   }
 
   .fullSiteLink{
