@@ -404,7 +404,7 @@
                             print "<br/>No results found.<br/>";
                         }
 
-                        print "<span style=\"color:#F00; font-size:20px; font-style:italic;\">Item availability is based on current stock at distributor. Please call Finders Records at (419) 352-7677 to check in-store availability.<br/><br/>MSLP is provided as a rough estimate of price and may not correspond to in-store price.</span><br/><br/>";
+                        print "<span style=\"color:#F00; font-size:12px; font-style:italic;\">Item availability is based on current stock at distributor. Please call Finders Records at (419) 352-7677 to check in-store availability.<br/><br/>MSLP is provided as a rough estimate of price and may not correspond to in-store price.</span><br/><br/>";
                         print "<p>Found " . $numberOfTuples . " results:</p>";
 
                         //print the tuples as a nice table
