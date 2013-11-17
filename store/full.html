@@ -78,18 +78,18 @@
                 <!-- Begin Quick search form -->
                 <div class="quickSearch">
                     <h2 class="searchHeader">Quick Search</h2>
-                    <form action="../search/full.php" method="post">
-                        <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
-                        <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
-                        <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
-                        <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
+                    <form action="../search/search.php" method="get">
+                        <input type="hidden" name="MatchType" value="Loose Match" />
+                        <input type="hidden" name="SearchFormat" value="All" />
+                        <input type="hidden" name="OrderResultsBy" value="Best Match" />
+                        <input type="hidden" name="ShowAvailableOnly" value="No" />
                         <table id="quickSearchTable">
                             <tr>
                                 <td class="searchLabels">
                                     <label for="artistInput">Artist:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryArtist" id="artistInput" type="text" size="22" /><br />
+                                    <input name="SearchArtist" id="artistInput" type="text" size="22" /><br />
                                 </td>
                             </tr>
                             <tr>
@@ -97,7 +97,7 @@
                                     <label for="titleInput">Title:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryTitle" id="titleInput" type="text" size="22" />
+                                    <input name="SearchTitle" id="titleInput" type="text" size="22" />
                                 </td>
                             </tr>
                             <tr>

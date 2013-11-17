@@ -71,18 +71,18 @@
                 <!-- Begin Quick search form -->
                 <div class="quickSearch">
                     <h2 class="searchHeader">Quick Search</h2>
-                    <form action="../search/search.php" method="post">
-                        <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
-                        <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
-                        <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
-                        <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
+                    <form action="../search/search.php" method="get">
+                        <input type="hidden" name="MatchType" value="Loose Match" />
+                        <input type="hidden" name="SearchFormat" value="All" />
+                        <input type="hidden" name="OrderResultsBy" value="Best Match" />
+                        <input type="hidden" name="ShowAvailableOnly" value="No" />
                         <table id="quickSearchTable">
                             <tr>
                                 <td class="searchLabels">
                                     <label for="artistInput">Artist:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryArtist" id="artistInput" type="text" size="22" /><br />
+                                    <input name="SearchArtist" id="artistInput" type="text" size="22" /><br />
                                 </td>
                             </tr>
                             <tr>
@@ -90,7 +90,7 @@
                                     <label for="titleInput">Title:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryTitle" id="titleInput" type="text" size="22" />
+                                    <input name="SearchTitle" id="titleInput" type="text" size="22" />
                                 </td>
                             </tr>
                             <tr>
@@ -154,16 +154,16 @@
             <!-- Begin Right Column -->
             <section class="rightCol">
 
-                <div class="advSearch" align="left">
-                    <h1 align="center">Advanced Search</h1>
-                    <table align="center" id="advancedSearchTable">
-                        <form action="search.php" method="post">
+                <div class="advSearch" style="text-align: left">
+                    <h1>Advanced Search</h1>
+                    <form action="search.php" method="GET">
+                        <table id="advancedSearchTable" style="text-align: center">
                             <tr>
                                 <td colspan="2">
-                                    <b style="font-size:large; margin-right:20px;">Search type:</b>
+                                    <label for="MatchType"><b style="font-size:large; margin-right:20px;">Search type:</b></label>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedSearchType">
+                                    <select name="MatchType" id="MatchType">
                                         <option>Loose Match</option>
                                         <option>Exact Match</option>
                                     </select>
@@ -171,10 +171,10 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <b style="font-size:large;">Format:</b>
+                                    <label for="SearchFormat"><b style="font-size:large;">Format:</b></label>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedFormat">
+                                    <select name="SearchFormat" id="SearchFormat">
                                         <option>All</option>
                                         <option>CD</option>
                                         <option>DVD</option>
@@ -187,10 +187,10 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <b style="font-size:large;">Sort by:</b>
+                                    <label for="OrderResultsBy"><b style="font-size:large;">Sort by:</b></label>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedOrder">
+                                    <select name="OrderResultsBy" id="OrderResultsBy">
                                         <option>Best Match</option>
                                         <option>Artist A-Z</option>
                                         <option>Title A-Z</option>
@@ -203,24 +203,24 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <b style="font-size:large; margin-right:10px;">Artist:</b>
+                                    <label for="SearchArtist"><b style="font-size:large; margin-right:10px;">Artist:</b></label>
                                 </td>
                                 <td colspan="2">
-                                    <input name="usersSearchQueryArtist" type="text" size="40" />
+                                    <input name="SearchArtist" type="text" size="40" id="SearchArtist" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <b style="font-size:large; margin-right:19px;">Title:</b>
+                                    <label for="SearchTitle"><b style="font-size:large; margin-right:19px;">Title:</b></label>
                                 </td>
                                 <td colspan="2">
-                                    <input name="usersSearchQueryTitle" type="text" size="40" />
+                                    <input name="SearchTitle" type="text" size="40" id="SearchTitle"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <b style="font-size:large; margin-right:10px;">Only show available items?</b>
-                                    <input type="checkbox" name="checkboxShowAvailableOnly" value="Yes" />
+                                    <label for="ShowAvailableOnly"><b style="font-size:large; margin-right:10px;">Only show available items?</b></label>
+                                    <input type="checkbox" name="ShowAvailableOnly" value="Yes" id="ShowAvailableOnly" />
                                 </td>
                             </tr>
                             <tr>
@@ -228,8 +228,8 @@
                                     <input class="searchButton" type="submit" value="Search" />
                                 </td>
                             </tr>
-                        </form>
-                    </table>
+                        </table>
+                    </form>
                 </div>
 
             </section>

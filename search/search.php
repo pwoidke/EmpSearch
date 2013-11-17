@@ -71,18 +71,18 @@
                 <!-- Begin Quick search form -->
                 <div class="quickSearch">
                     <h2 class="searchHeader">Quick Search</h2>
-                    <form action="../search/search.php" method="post">
-                        <input type="hidden" name="pullDownOptionUserSelectedSearchType" value="Loose Match" />
-                        <input type="hidden" name="pullDownOptionUserSelectedFormat" value="All" />
-                        <input type="hidden" name="pullDownOptionUserSelectedOrder" value="Best Match" />
-                        <input type="hidden" name="checkboxShowAvailableOnly" value="No" />
+                    <form action="../search/search.php" method="get">
+                        <input type="hidden" name="MatchType" value="Loose Match" />
+                        <input type="hidden" name="SearchFormat" value="All" />
+                        <input type="hidden" name="OrderResultsBy" value="Best Match" />
+                        <input type="hidden" name="ShowAvailableOnly" value="No" />
                         <table id="quickSearchTable">
                             <tr>
                                 <td class="searchLabels">
                                     <label for="artistInput">Artist:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryArtist" id="artistInput" type="text" size="22" /><br />
+                                    <input name="SearchArtist" id="artistInput" type="text" size="22" /><br />
                                 </td>
                             </tr>
                             <tr>
@@ -90,7 +90,7 @@
                                     <label for="titleInput">Title:</label>
                                 </td>
                                 <td class="searchInputs">
-                                    <input name="usersSearchQueryTitle" id="titleInput" type="text" size="22" />
+                                    <input name="SearchTitle" id="titleInput" type="text" size="22" />
                                 </td>
                             </tr>
                             <tr>
@@ -157,15 +157,15 @@
                 <div class="advSearch" align="left">
                     <h1 align="center">Advanced Search</h1>
                     <table align="center">
-                        <form action="search.php" method="post">
+                        <form action="search.php" method="get">
                             <tr>
                                 <td colspan="2">
                                     <b style="font-size:large; margin-right:20px;">Search type:</b>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedSearchType">
-                                        <option>Loose Match</option>
-                                        <option>Exact Match</option>
+                                    <select name="MatchType">
+                                        <option <?=$_GET['MatchType'] == 'Loose Match' ? ' selected="selected"' : '';?>>Loose Match</option>
+                                        <option <?=$_GET['MatchType'] == 'Exact Match' ? ' selected="selected"' : '';?>>Exact Match</option>
                                     </select>
                                 </td>
                             </tr>
@@ -174,14 +174,14 @@
                                     <b style="font-size:large;">Format:</b>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedFormat">
-                                        <option>All</option>
-                                        <option>CD</option>
-                                        <option>DVD</option>
-                                        <option>Vinyl</option>
-                                        <option>SA-CD</option>
-                                        <option>Accessory</option>
-                                        <option>Other</option>
+                                    <select name="SearchFormat">
+                                        <option <?=$_GET['SearchFormat'] == 'All' ? ' selected="selected"' : '';?>>All</option>
+                                        <option <?=$_GET['SearchFormat'] == 'CD' ? ' selected="selected"' : '';?>>CD</option>
+                                        <option <?=$_GET['SearchFormat'] == 'DVD' ? ' selected="selected"' : '';?>>DVD</option>
+                                        <option <?=$_GET['SearchFormat'] == 'Vinyl' ? ' selected="selected"' : '';?>>Vinyl</option>
+                                        <option <?=$_GET['SearchFormat'] == 'SA-CD' ? ' selected="selected"' : '';?>>SA-CD</option>
+                                        <option <?=$_GET['SearchFormat'] == 'Accessory' ? ' selected="selected"' : '';?>>Accessory</option>
+                                        <option <?=$_GET['SearchFormat'] == 'Other' ? ' selected="selected"' : '';?>>Other</option>
                                     </select>
                                 </td>
                             </tr>
@@ -190,14 +190,14 @@
                                     <b style="font-size:large;">Sort by:</b>
                                 </td>
                                 <td>
-                                    <select name="pullDownOptionUserSelectedOrder">
-                                        <option>Best Match</option>
-                                        <option>Artist A-Z</option>
-                                        <option>Title A-Z</option>
-                                        <option>Release Date (Newest First)</option>
-                                        <option>Release Date (Oldest First)</option>
-                                        <option>Price (Ascending)</option>
-                                        <option>Price (Descending)</option>
+                                    <select name="OrderResultsBy">
+                                        <option <?=$_GET['OrderResultsBy'] == 'Best Match' ? ' selected="selected"' : '';?>>Best Match</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Artist A-Z' ? ' selected="selected"' : '';?>>Artist A-Z</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Title A-Z' ? ' selected="selected"' : '';?>>Title A-Z</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Release Date (Newest First)' ? ' selected="selected"' : '';?>>Release Date (Newest First)</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Release Date (Oldest First)' ? ' selected="selected"' : '';?>>Release Date (Oldest First)</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Price (Ascending)' ? ' selected="selected"' : '';?>>Price (Ascending)</option>
+                                        <option <?=$_GET['OrderResultsBy'] == 'Price (Descending)' ? ' selected="selected"' : '';?>>Price (Descending)</option>
                                     </select>
                                 </td>
                             </tr>
@@ -206,7 +206,7 @@
                                     <b style="font-size:large; margin-right:10px;">Artist:</b>
                                 </td>
                                 <td colspan="2">
-                                    <input name="usersSearchQueryArtist" type="text" size="40" />
+                                    <input name="SearchArtist" type="text" size="40" value="<? echo $_GET['SearchArtist'] ?>" />
                                 </td>
                             </tr>
                             <tr>
@@ -214,13 +214,13 @@
                                     <b style="font-size:large; margin-right:19px;">Title:</b>
                                 </td>
                                 <td colspan="2">
-                                    <input name="usersSearchQueryTitle" type="text" size="40" />
+                                    <input name="SearchTitle" type="text" size="40" value="<? echo $_GET['SearchTitle'] ?>" />
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="3">
                                     <b style="font-size:large; margin-right:10px;">Only show available items?</b>
-                                    <input type="checkbox" name="checkboxShowAvailableOnly" value="Yes" />
+                                    <input type="checkbox" name="ShowAvailableOnly" value="Yes" <?php echo ($_GET['ShowAvailableOnly'] ? 'checked' : '');?> />
                                 </td>
                             </tr>
                             <tr>
@@ -233,12 +233,12 @@
 
 <?php
 
-                    $usersQueryArtist = $_POST['usersSearchQueryArtist'];
-                    $usersQueryTitle = $_POST['usersSearchQueryTitle'];
-                    $usersSearchType = $_POST['pullDownOptionUserSelectedSearchType'];
-                    $usersFormat = $_POST['pullDownOptionUserSelectedFormat'];
-                    $usersOrderBy = $_POST['pullDownOptionUserSelectedOrder'];
-                    $usersShowAvailableResultsOnly = $_POST['checkboxShowAvailableOnly'];
+                    $usersQueryArtist = $_GET['SearchArtist'];
+                    $usersQueryTitle = $_GET['SearchTitle'];
+                    $usersSearchType = $_GET['MatchType'];
+                    $usersFormat = $_GET['SearchFormat'];
+                    $usersOrderBy = $_GET['OrderResultsBy'];
+                    $usersShowAvailableResultsOnly = $_GET['ShowAvailableOnly'];
 
                     //Set default values of post vars if needed (used for quick search)
                     if(!$usersSearchType){$usersSearchType = "Loose Match";}
