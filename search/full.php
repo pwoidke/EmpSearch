@@ -227,7 +227,7 @@
                             <tr>
                                 <td colspan="3">
                                     <b style="font-size:large; margin-right:10px;">Only show available items?</b>
-                                    <input type="checkbox" name="ShowAvailableOnly" value="Yes" <?php echo ($_GET['ShowAvailableOnly'] ? 'checked' : '');?> />
+                                    <input type="checkbox" name="ShowAvailableOnly" value="Yes" <?php echo ($_GET['ShowAvailableOnly']=='Yes' ? 'checked' : '');?> />
                                 </td>
                             </tr>
                             <tr>
