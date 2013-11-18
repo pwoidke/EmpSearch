@@ -218,12 +218,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="3">
-                                    <b style="font-size:large; margin-right:10px;">Only show available items?</b>
-                                    <input type="checkbox" name="ShowAvailableOnly" value="Yes" <?php echo ($_GET['ShowAvailableOnly']=='Yes' ? 'checked' : '');?> />
-                                </td>
-                            </tr>
-                            <tr>
                                 <td colspan="3" style="text-align: center">
                                     <input class="searchButton" type="submit" value="Search" />
                                 </td>
@@ -238,13 +232,11 @@
                     $usersSearchType = $_GET['MatchType'];
                     $usersFormat = $_GET['SearchFormat'];
                     $usersOrderBy = $_GET['OrderResultsBy'];
-                    $usersShowAvailableResultsOnly = $_GET['ShowAvailableOnly'];
 
                     //Set default values of post vars if needed (used for quick search)
                     if(!$usersSearchType){$usersSearchType = "Loose Match";}
                     if(!$usersFormat){$usersFormat = "All";}
                     if(!$usersOrderBy){$usersOrderBy = "Best Match";}
-                    if(!$usersShowAvailableResultsOnly){$usersShowAvailableResultsOnly = "No";}
 
                     if(($usersQueryArtist != "") && ($usersQueryTitle != ""))
                     {
@@ -312,12 +304,6 @@
                         $sqlQuery .= "SELECT * FROM items WHERE (ID > 0";
                     }
                     $sqlQuery .= ")";
-
-                    //Concatenate Availablility conditional
-                    if($usersShowAvailableResultsOnly == "Yes")
-                    {
-                        $sqlQuery .= " AND QtyAvail > 0";
-                    }
 
                     //Concatenate Format conditional
                     if($usersFormat != "All")
